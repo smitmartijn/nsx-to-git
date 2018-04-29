@@ -207,29 +207,29 @@ $NSXManagerConfig += $tmp
 Write-Host  -ForeGroundColor yellow "`nCreating Export XML Files.."
 
 # Export config to their XML files
-$NSXManagerConfig | Format-Xml | Out-File $NSXManagerConfig_ExportFile
-$Controllers | Format-Xml | Out-File $Controllers_ExportFile
+$NSXManagerConfig | Format-Xml | Out-File $NSXManagerConfig_ExportFile -Encoding ASCII
+$Controllers | Format-Xml | Out-File $Controllers_ExportFile -Encoding ASCII
 
-$LogicalSwitches | Format-Xml | Out-File $LogicalSwitches_ExportFile
-$LogicalRouters | Format-Xml | Out-File $LogicalRouters_ExportFile
-$Edges | Format-Xml | Out-File $Edges_ExportFile
-$TransportZones | Format-Xml | Out-File $TransportZones_ExportFile
+$LogicalSwitches | Format-Xml | Out-File $LogicalSwitches_ExportFile -Encoding ASCII
+$LogicalRouters | Format-Xml | Out-File $LogicalRouters_ExportFile -Encoding ASCII
+$Edges | Format-Xml | Out-File $Edges_ExportFile -Encoding ASCII
+$TransportZones | Format-Xml | Out-File $TransportZones_ExportFile -Encoding ASCII
 
 
-$Services | Format-Xml | Out-File $Services_ExportFile
-$ServiceGroups | Format-Xml | Out-File $ServiceGroups_ExportFile
-$IPSets | Format-Xml | Out-File $IpSets_ExportFile
+$Services | Format-Xml | Out-File $Services_ExportFile -Encoding ASCII
+$ServiceGroups | Format-Xml | Out-File $ServiceGroups_ExportFile -Encoding ASCII
+$IPSets | Format-Xml | Out-File $IpSets_ExportFile -Encoding ASCII
 
-$SecurityTags | Format-Xml | Out-File $SecurityTags_ExportFile
-$SecurityGroups | Format-Xml | Out-File $SecurityGroups_ExportFile
-$SecurityPolicies | Format-Xml | Out-File $SecurityPolicies_ExportFile
+$SecurityTags | Format-Xml | Out-File $SecurityTags_ExportFile -Encoding ASCII
+$SecurityGroups | Format-Xml | Out-File $SecurityGroups_ExportFile -Encoding ASCII
+$SecurityPolicies | Format-Xml | Out-File $SecurityPolicies_ExportFile -Encoding ASCII
 
-$FirewallRules | Format-Xml | Out-File $FirewallRules_ExportFile
-$FirewallSections | Format-Xml | Out-File $FirewallSections_ExportFile
-$FirewallSaved | Format-Xml | Out-File $FirewallSaved_ExportFile
+$FirewallRules | Format-Xml | Out-File $FirewallRules_ExportFile -Encoding ASCII
+$FirewallSections | Format-Xml | Out-File $FirewallSections_ExportFile -Encoding ASCII
+$FirewallSaved | Format-Xml | Out-File $FirewallSaved_ExportFile -Encoding ASCII
 
-$SpoofGuardPolicies | Format-Xml | Out-File $SpoofGuardPolicies_ExportFile
-$SpoofGuardNics | Format-Xml | Out-File $SpoofGuardNics_ExportFile
+$SpoofGuardPolicies | Format-Xml | Out-File $SpoofGuardPolicies_ExportFile -Encoding ASCII
+$SpoofGuardNics | Format-Xml | Out-File $SpoofGuardNics_ExportFile -Encoding ASCII
 
 # Commit to git!
 Write-Host -ForegroundColor yellow "`nCommitting changes to Git"
